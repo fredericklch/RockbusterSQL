@@ -38,9 +38,9 @@ The full details of the data are available [here](https://drive.google.com/file/
 
 ## Tools
 
-- PostgreSQL - for data analysis
-- DBVisualizer - for Entity Relationship Diagram (ERD)
-- Tableau - for visualization
+- PostgreSQL: for data analysis
+- DBVisualizer: for Entity Relationship Diagram (ERD)
+- Tableau: for visualization
 
 ## Resources
 
