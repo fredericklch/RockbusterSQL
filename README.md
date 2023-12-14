@@ -18,21 +18,21 @@ Questions to help plan for 2020 company strategy:
 
 The dataset comprises of information on the following parameters: 
 
--actor
--address
--category
--city
--country
--customer
--film
--film_actor
--film_category
--inventory
--language
--payment
--rental
--staff
--store
+- actor
+- address
+- category
+- city
+- country
+- customer
+- film
+- film_actor
+- film_category
+- inventory
+- language
+- payment
+- rental
+- staff
+- store
 
 The full details of the data are available [here](https://drive.google.com/file/d/1hVzBWz5ORRbI37HA8p5tAiuZyMOe66yI/view)
 
