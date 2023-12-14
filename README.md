@@ -44,6 +44,7 @@ The full details of the data are available [here](https://drive.google.com/file/
 
 ## Resources
 
-Relevant resources will be posted here
+The visualization of this project is accessbile [here](https://public.tableau.com/app/profile/cheng.hee.liew/viz/Task3_10_RockbusterPresentation/Top5CustomerMap)
+
 
 
