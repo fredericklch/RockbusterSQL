@@ -1,1 +1,39 @@
+Here is a SQL query with a join to find the top 10 countries with most customers:
 
+SELECT D.country,
+       COUNT(customer_id) AS total_customers
+FROM customer A
+LEFT JOIN address B ON A.address_id = B.address_id
+LEFT JOIN city C ON B.city_id = C.city_id
+LEFT JOIN country D ON C.country_id = D.country_id
+GROUP BY country
+ORDER BY total_customers DESC
+LIMIT 10
+
+
+Here is another SQL query with join to find the top customer count in top 10 countries with most customers:
+
+SELECT C.city,
+       COUNT(customer_id) AS total_customers
+FROM customer A
+LEFT JOIN address B ON A.address_id = B.address_id
+LEFT JOIN city C ON B.city_id = C.city_id
+LEFT JOIN country D ON C.country_id = D.country_id
+WHERE country IN('India','China','United States','Japan','Mexico','Brazil','Russian Federation','Philippines','Turkey','Indonesia')
+GROUP BY city
+ORDER BY total_customers DESC
+
+
+Here is a SQL query with inner join to find the top 5 customers (with most expenditure) within the top 10 countries:
+
+(SELECT
+A.customer_id, A.first_name, A.last_name, C.city, D.country, SUM(E.amount) AS total_paid
+FROM customer A
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_id = D.country_id
+INNER JOIN payment E ON A.customer_id = E.customer_id
+GROUP BY A.customer_id,A.first_name,A.last_name,C.city,D.country
+HAVING country IN ('India','China','United States','Japan','Mexico','Brazil','Russian Federation','Philippines','Turkey','Indonesia')
+ORDER BY total_paid DESC
+LIMIT 5)
