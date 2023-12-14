@@ -1,1 +1,13 @@
+Here is a SQL query to check for duplicates:
 
+SELECT title, release_year, language_id, rental_duration,COUNT(*)
+FROM film
+GROUP BY title, release_year, language_id, rental_duration
+HAVING COUNT(*) >1
+
+
+Here is a SQL query to check for non-uniform data:
+
+SELECT DISTINCT
+rating
+FROM film
